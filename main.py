@@ -177,6 +177,7 @@ plt.subplot(212)
 plt.stem(range(0, dd.size), dd, linefmt=".", )
 plt.axis([0, dd.size, -1.5, 1.5])
 plt.title('发送滤波器的输入符号序列')
+plt.savefig("image/传输码与发送滤波器的输入符号序列图.jpg")
 plt.show()
 
 # **********发送滤波器************
@@ -189,6 +190,7 @@ plt.title('经过发送滤波器波形图')
 # ************眼图**************
 eye_image(st, eye_num, dt, N_sample)
 plt.title('经过发送滤波器后的眼图')
+plt.savefig("image/经过发送滤波器波形图与眼图.jpg")
 plt.show()
 
 # **********码间干扰************
@@ -201,6 +203,7 @@ plt.figure(num=3, figsize=(12, 8), dpi=200)
 plt.plot(st_y)
 plt.title('叠加干扰后的波形图')
 plt.axis([0, 200, -2, 2])
+plt.savefig("image/叠加干扰后的波形图.jpg")
 plt.show()
 
 # ************眼图**************
@@ -227,6 +230,7 @@ for k in range(3, 30 + 1):
     plt.subplot(212)
     plt.plot(ttt, s3)
     plt.title('7 抽头系数时域均衡后眼图')
+plt.savefig("image/叠加码间干扰眼图与7抽头系数时域均衡后眼图.jpg")
 plt.show()
 
 # ****************时域均衡 M 为 31*******************
@@ -256,6 +260,7 @@ for n in range(M, NN + 1):
 plt.figure(num=6, figsize=(12, 8), dpi=200)
 plt.plot(out_m99)
 plt.title('时域均衡后波形图')
+plt.savefig("image/时域均衡后波形图.jpg")
 
 s5 = zeros((1, dot(eye_num, N_sample)))
 ttt = arange(0, dot(dot(eye_num, N_sample), dt) - dt, dt)
@@ -265,6 +270,7 @@ for k in range(3, 30 + 1):
     plt.subplot(212)
     plt.plot(ttt, s5)
     plt.title('99 抽头系数时域均衡后眼图')
+plt.savefig("image/33抽头系数与99抽头系数时域均衡后眼图.jpg")
 plt.show()
 
 # ************抽样判决 and 误码率**************
@@ -296,6 +302,7 @@ plt.subplot(212)
 plt.stem(range(0, receive99.size), receive99, linefmt=".")
 plt.title('均衡后波形采样')
 plt.axis([0, 100, -1.5, 1.5])
+plt.savefig("image/有码间串扰的波形采样图与均衡后波形采样图.jpg")
 plt.show()
 
 N_data_2 = 100
@@ -437,4 +444,5 @@ plt.show()
 plt.figure(num=9, figsize=(12, 8), dpi=200)
 plt.stem(range(0, w4.size), w4, linefmt=".")
 plt.title("99 抽头的抽头系数")
+plt.savefig("image/99 抽头的抽头系数.jpg")
 plt.show()
