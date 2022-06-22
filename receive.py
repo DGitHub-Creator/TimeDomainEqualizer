@@ -5,11 +5,11 @@ np.set_printoptions(suppress=True)
 
 
 def receive(st_y):
-    '''
-
+    """
+    !!!此函数没有在主函数中使用
     :param st_y:
     :return:
-    '''
+    """
     global d
     global st
     global t

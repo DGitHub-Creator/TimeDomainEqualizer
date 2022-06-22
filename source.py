@@ -7,11 +7,11 @@ np.set_printoptions(suppress=True)
 
 
 def concat(mxs):
-    '''
+    """
 
     :param mxs:
     :return:
-    '''
+    """
 
     mx = np.array(mxs[0])
     # print(type(mx))
