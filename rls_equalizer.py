@@ -6,7 +6,7 @@ np.set_printoptions(suppress=True)
 
 def rls_equalizer(z, mo, u, m):
     """
-
+    !!!此函数没有在主函数中使用
     :param z:
     :param mo:
     :param u:
